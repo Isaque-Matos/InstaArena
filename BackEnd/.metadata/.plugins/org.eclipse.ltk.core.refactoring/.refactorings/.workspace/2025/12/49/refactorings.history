@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;InstaArenaBackEnd&apos;" deleteContents="false" description="Delete resource &apos;InstaArenaBackEnd&apos;" element1="/InstaArenaBackEnd" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1764693017968"/>
+</session>

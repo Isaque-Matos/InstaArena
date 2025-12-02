@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/perfil.css">
+    <title>Home</title>
+</head>
+<body>
+     <header>
+         <img src="/imagens/cabecalho.png"> 
+    </header>
+    <div class="Foto">
+        <input type="file" id="Foto" accept="image/*"/>
+        <label for="Foto" id="previewFoto"></label>
+    </div>
+    <div class="Info">
+        <div class="user">Usuário :</div>
+        <div class="info2">
+            <div class="Idd">Gmail :</div>
+        <div class="Info2"><div class="PlanoDeFundo">
+        <label for="PlanoDeFundo">PAPEL DE PAREDE</label>
+        <input type="file" id="PlanoDeFundo" accept="image/*"/></div>
+        </div>
+    </div>
+    <section class="area-galeria">
+        <div class="titulo">
+            <h1>GALERIA</h1>
+            <button class="add-small-btn" onclick="addImage()">+</button>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" hidden>
+        <div class="galeria" id="galeria"></div>
+    </section>
+    <div class="menu">
+        <a href="/HTML/perfil.html"><img src="/imagens/IconPerfil.png" class="icon"><span>Perfil</span></a>
+        <a href="/HTML/home.html"><img src="/imagens/IconMensagem.png" class="icon"><span>Home</span></a>
+        <a href="/HTML/sobre.html"><img src="/imagens/curtidas.png" class="icon"><span>Curtidas</span></a>
+        <a href="/HTML/indexLogin.html"><img src="/imagens/iconSair.png" class="icon"><span>Sair</span></a>
+    </div>
+    <footer><h2>&copy; 2025 - Garagem Boys</h2></footer>
+    <script src="/JAVASCRIPT/perfil.js"></script>
+</body>
+</html>

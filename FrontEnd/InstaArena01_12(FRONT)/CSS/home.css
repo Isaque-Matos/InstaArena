@@ -1,0 +1,243 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #ffbb00;
+}
+header{
+    position: fixed;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    z-index: 20;
+}
+header img{
+    height: 65px;
+    padding: 0 20px;
+}
+.anuncios{
+    justify-items:center;
+    position: fixed;
+    background-color: #ffffff93; 
+    right:20px;
+    top:70px;
+    border-radius:25px;
+    width: 180px;
+    height: 80vh;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 1px 4px;/*sombra*/
+    padding: 10px 20px ;
+}
+.anuncios img{
+    width: 200px;
+    height: 225px;
+    border-radius: 20px;
+}
+.menu{
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.818);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    border-radius: 25px;
+    top:30%;
+    left:10px;
+    gap: 0.1px;
+    transition: width 0.4s ease;
+    overflow: hidden;
+    padding: 15px 8px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 1px 4px;/*sombra*/
+}
+.menu:hover{
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+}
+.menu a{
+    display: flex;
+    text-decoration: none;
+    gap:8px;
+    align-items: center;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.menu span{
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    color: black;
+}
+.menu:hover span{
+    opacity: 1;
+}
+.menu a:hover{
+    transform: scale(1.05);
+    background-color: rgb(222, 222, 222);
+    width: 150px;
+    border-radius: 20px;
+    transition:0.2s;
+}
+/* FEED CENTRAL */
+.feed {
+    margin-left: 140px;
+    padding: 80px 15px;
+}
+
+@media(max-width:768px){
+    .foto{
+        position:relative;
+        margin: 20px auto 10px auto;
+        display:block;
+        left: 0;
+        top:20px;
+    }.feed{
+        margin: 0 auto;
+        padding: 10px;
+        width: 95%;
+    }
+    .menu{
+        width: 90%;
+        height: 75px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        bottom: 10px;
+        top: auto;
+        border-radius: 20px;
+        padding: 0;
+        position: fixed;
+        background: #ffffff93;
+    }
+    .menu span{
+        display: none;
+    }
+    .anuncios{
+        display: none;
+    }
+    .post-box{
+        width:100%;
+        border-radius: 30px;
+    }
+    .post{
+        width:100%;
+        border-radius: 30px;
+    }
+}
+
+/* ---------- CAIXA DE POSTAGEM ---------- */
+
+.post-box {
+    background: #ffffff93;
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    width: 800px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 1px 4px;/*sombra*/
+}
+.post-box:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+.post-box textarea {
+    width: 98%;
+    height: 70px;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.preview-img {
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 15px;
+}
+button{
+    background-color: rgb(0, 149, 255);
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    margin-left: 450px;
+}
+button:hover{
+    background-color: rgb(38, 0, 255);
+    transition: 0.5s;
+}
+/* ---------- CARD DOS POSTS (COMENTADO LINHA POR LINHA) ---------- */
+
+.post {
+    background: #ffffff93;          /* Cor do balão de post */
+    padding: 15px;                /* Respiro interno */
+    border-radius: 20px;          /* Deixa bordas arredondadas */
+    margin-bottom: 30px;          /* Distância de um post pro outro */
+    position: relative;           /* Necessário pros botões dentro */
+    overflow: hidden;             /* Corta excedentes da imagem durante zoom */
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 1px 4px;/*sombra*/
+    width: 800px;
+}
+.post:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+/* IMAGEM DO POST */
+.post img {
+    width: 100%;                  /* A imagem preenche o card */
+    border-radius: 20px;          /* Arredondamento igual do exemplo */
+    transition: 0.5s;             /* Animação suave ao passar mouse */
+    width: 100px;
+    filter: blur(0px);            /* Começa sem blur */
+}
+
+/* HOVER COM ZOOM + BLUR */
+.post:hover img {
+    transform: scale(1.0);       /* Zoom suave */
+}
+
+
+/* BOTÃO DE CURTIR */
+.like-btn {
+    font-size: 30px;              /* Tamanho do coração */
+    cursor: pointer;              /* Mostrar que dá clique */
+    user-select: none;            /* Impede texto de selecionar */
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Quando está curtido */
+.liked {
+    color: red;
+}
+
+/* BOTÃO CANCELAR (X) */
+.cancel-btn {
+    font-size: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+footer{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 30%;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    left: 35%;
+    bottom: 10px;
+}
