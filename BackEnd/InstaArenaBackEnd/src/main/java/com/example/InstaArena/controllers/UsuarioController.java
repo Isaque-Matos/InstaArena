@@ -25,10 +25,11 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	
 	@PostMapping("/usuarios")
-	public ResponseEntity<UsuarioEntity> criarUsuario(@RequestBody @Valid UsuarioRecordDto usuarioRecordDto){
+	public ResponseEntity<UsuarioEntity> criarUsuario(@RequestBody 
+			@Valid UsuarioRecordDto usuarioRecordDto){
 		var usuarioEntity = new UsuarioEntity();
 		usuarioEntity = usuarioService.criarUsuario(usuarioRecordDto);
-		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioEntity);
+		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioEntity); 
 	}
 	
 	@PostMapping("/usuarios/{email}/{senha}")

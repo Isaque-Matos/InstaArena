@@ -1,0 +1,45 @@
+package com.example.InstaArena.services;
+
+import java.util.Optional;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.InstaArena.dtos.UsuarioRecordDto;
+import com.example.InstaArena.entities.UsuarioEntity;
+import com.example.InstaArena.repositories.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+
+	@Autowired
+	UsuarioRepository usuarioRepository;
+	
+	public UsuarioEntity criarUsuario(UsuarioRecordDto usuarioRecordDto){
+		var usuarioEntity = new UsuarioEntity();
+		BeanUtils.copyProperties(usuarioRecordDto, usuarioEntity);
+		return usuarioRepository.save(usuarioEntity);
+	}
+	
+	public Optional<UsuarioEntity> verificarUsuario(String email, String senha) {
+		Optional<UsuarioEntity> usuarioO = usuarioRepository.findByEmail(email);
+		if(usuarioO.isEmpty()) {
+			return Optional.empty();
+		}
+		UsuarioEntity user = usuarioO.get();
+		if(!user.getSenha().equals(senha)) {
+			return Optional.empty();
+		}
+		return usuarioO;
+	}
+	
+	public Optional<UsuarioEntity> getUserProfile(String nome, String email){
+		Optional<UsuarioEntity> usuarioO = usuarioRepository.findByEmail(email);
+		if(usuarioO.isEmpty()) {
+			return Optional.empty();
+		}
+		UsuarioEntity user = usuarioO.get();
+		return usuarioO;
+	}
+}
