@@ -15,6 +15,31 @@ O projeto foi criado com foco em praticar e aplicar conceitos de **desenvolvimen
 - **MySQL**: Banco de dados utilizado para armazenamento das informações do usuário.
  
 ---
+
+## Tela de Cadastro
+
+![Tela de Cadastro](FrontEnd/InstaArena05_12(FRONT)/imagens/cadastro.png)
+
+Aqui o usuário digita seus dados e caso tudo esteja preenchido será salvo no banco de dados, após isso o usuário será levado a tela de login
+
+## Tela de Login
+
+![Tela de Login](FrontEnd/InstaArena05_12(FRONT)/imagens/Login.png)
+
+Na tela de login é necessário digitar as informações de uma conta que já está cadastrada e salva no banco de dados, caso o email ou senha esteja errado não será possível fazer o login
+
+## Home
+
+![Home](FrontEnd/InstaArena05_12(FRONT)/imagens/home.png)
+
+Página inicial do site onde é possível fazer posts, dar likes ou excluir posts
+
+## Perfil
+
+![Perfil](FrontEnd/InstaArena05_12(FRONT)/imagens/perfil.png)
+
+Página de perfil, aonde é possível mudar a foto de perfil, mudar o papel de parede e adicionar fotos a galeria
+
 ## 🧠 Objetivos de Aprendizado
 - Praticar o desenvolvimento de interfaces modernas e responsivas.  
 - Aplicar boas práticas de organização de código front-end.  
